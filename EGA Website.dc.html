@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="EGA is the graduate student organization serving and representing graduate students across the University of Delaware College of Education and Human Development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&amp;family=Karla:ital,wght@0,300..700;1,300..600&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#FDFAF7;color:#24121A;font-family:"Karla",system-ui,Helvetica,Arial,sans-serif;font-size:1.05rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  img{max-width:100%}
+  h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.06;margin:0;font-variation-settings:"SOFT" 30,"WONK" 1;letter-spacing:-.018em}
+  a{color:#763241}
+  a:hover{color:#43171F}
+  :focus-visible{outline:2.5px solid #B8842A;outline-offset:3px;border-radius:2px}
+  html{scroll-behavior:smooth}
+</style>
+</helmet>
+
+<div id="home" data-document-role="page" data-label="Home" data-screen-label="Home" style="display:{{ homeDisplay }};background:#FDFAF7">
+
+  <nav style="background:#FDFAF7;border-bottom:1px solid rgba(36,18,26,.13)">
+    <div style="max-width:1180px;margin:0 auto;padding:.85rem clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem">
+      <a href="#home" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;margin-right:auto;color:#24121A">
+        <img src="assets/ega-mark.png" alt="" style="width:2.4rem;height:2.4rem;flex:none;border-radius:.45rem;display:block">
+        <span style="display:flex;flex-direction:column;line-height:1.15">
+          <b style="font-family:'Fraunces',Georgia,serif;font-size:1.02rem;font-weight:600;letter-spacing:-.01em">Education Graduate Association</b>
+          <span style="font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(36,18,26,.44);font-weight:600">University of Delaware · CEHD</span>
+        </span>
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-left:auto">
+        <a href="#home" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:#763241;background:#F2E6D4">Home</a>
+        <a href="#about" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">About EGA</a>
+        <a href="#resources" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Resources</a>
+        <span style="position:relative;display:inline-flex"><a href="{{ mailto }}" onMouseEnter="{{ contactEnter }}" onMouseLeave="{{ contactLeave }}" onFocus="{{ contactEnter }}" onBlur="{{ contactLeave }}" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66);transition:color .18s,background .18s" style-hover="color:#763241;background:#F2E6D4">Contact</a><span style="display:{{ contactTipDisplay }};position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:.3rem;background:#24121A;color:#FDFAF7;font-size:.74rem;font-weight:600;padding:.35rem .6rem;border-radius:.3rem;white-space:nowrap;z-index:40;box-shadow:0 6px 18px -8px rgba(36,18,26,.6)">{{ email }}</span></span>
+        <a href="#join" style="text-decoration:none;font-size:.86rem;font-weight:700;padding:.5rem .78rem;border-radius:.4rem;background:#763241;color:#fff;box-shadow:0 2px 0 0 #43171F;white-space:nowrap" style-hover="background:#43171F">Join EGA</a>
+      </div>
+    </div>
+  </nav>
+
+  <header style="position:relative;overflow:hidden;color:#F2E6D4;background:radial-gradient(85% 70% at 92% 4%,rgba(227,182,92,.17) 0%,rgba(227,182,92,0) 62%),linear-gradient(158deg,#763241 0%,#5C2433 52%,#43171F 100%)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(3.5rem,9vw,7rem) clamp(1.25rem,5vw,4.5rem) clamp(3.25rem,7vw,5.5rem);display:grid;gap:clamp(2.5rem,5vw,4rem);grid-template-columns:repeat(auto-fit,minmax(min(430px,100%),1fr));align-items:center">
+      <div>
+        <img src="assets/ega-logo-full.png" alt="Education Graduate Association at the University of Delaware" style="display:block;width:clamp(190px,21vw,250px);height:auto;margin-bottom:1.9rem">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#E3B65C;display:flex;align-items:center;gap:.7rem;margin:0 0 1.15rem">A Graduate Student Organization</p>
+        <h1 style="font-size:clamp(2.5rem,1.4rem + 4.6vw,4.4rem);color:#fff;font-weight:500;letter-spacing:-.032em;font-variation-settings:'SOFT' 40,'WONK' 1;max-width:14ch">Every CEHD grad student has a <em style="font-style:normal;color:#E3B65C;font-weight:600">seat here.</em></h1>
+        <p style="font-size:clamp(1.02rem,.98rem + .3vw,1.16rem);color:rgba(253,250,247,.86);max-width:46ch;margin:1.5rem 0 0;line-height:1.62">EGA serves and represents graduate students across the School of Education, Human Development and Family Sciences, Education and Social Policy, and Social Work. We run workshops, host socials, publish the newsletter, and carry student feedback to the college.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.1rem">
+          <a href="#resources" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;background:#E3B65C;color:#43171F;box-shadow:0 3px 0 0 #9E7420" style-hover="background:#EFC876">Find student resources →</a>
+          <a href="#about" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;border:1px solid rgba(253,250,247,.4);color:#fff" style-hover="background:rgba(253,250,247,.12)">What EGA does</a>
+        </div>
+      </div>
+
+      <div style="background:rgba(253,250,247,.07);border:1px solid rgba(253,250,247,.22);border-radius:.9rem;padding:clamp(1.25rem,2.6vw,1.9rem)">
+        <h2 style="font-size:1.02rem;color:#fff;font-weight:600">Who we serve, who we represent</h2>
+        <p style="font-size:.79rem;color:rgba(253,250,247,.62);margin:.35rem 0 1.35rem">Four programs, three degree levels, one association.</p>
+        <div style="overflow-x:auto"><table style="width:100%;min-width:300px;border-collapse:separate;border-spacing:4px;table-layout:fixed">
+          <thead>
+            <tr>
+              <th scope="col" style="padding:0"></th>
+              <th scope="col" style="padding:0 0 .5rem;font-family:'Karla',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(253,250,247,.72);line-height:1.3;vertical-align:bottom;text-align:center">SOE</th>
+              <th scope="col" style="padding:0 0 .5rem;font-family:'Karla',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(253,250,247,.72);line-height:1.3;vertical-align:bottom;text-align:center">
+                HDFS
+                <span style="display:block;margin:.3rem auto 0;width:fit-content;font-size:.55rem;letter-spacing:.06em;font-weight:700;color:#E3B65C;border:1px solid rgba(227,182,92,.55);border-radius:1rem;padding:.1rem .4rem;text-transform:none">+ HDFS‑GA</span>
+              </th>
+              <th scope="col" style="padding:0 0 .5rem;font-family:'Karla',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(253,250,247,.72);line-height:1.3;vertical-align:bottom;text-align:center">Ed.&nbsp;&amp; Social Policy</th>
+              <th scope="col" style="padding:0 0 .5rem;font-family:'Karla',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(253,250,247,.72);line-height:1.3;vertical-align:bottom;text-align:center">MSW</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(253,250,247,.72);text-align:left;padding:0 .5rem 0 0;width:4.4rem">Master's</th>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:rgba(253,250,247,.17);border:1px solid rgba(253,250,247,.34)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#F3D08D"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:rgba(253,250,247,.17);border:1px solid rgba(253,250,247,.34)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#F3D08D"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;background:rgba(253,250,247,.055);border:1px solid rgba(253,250,247,.10)"></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:rgba(253,250,247,.17);border:1px solid rgba(253,250,247,.34)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#F3D08D"></span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(253,250,247,.72);text-align:left;padding:0 .5rem 0 0;width:4.4rem">Ph.D.</th>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:#E3B65C;border:1px solid #E3B65C"><span style="width:.62rem;height:.62rem;border-radius:50%;background:#43171F"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:rgba(253,250,247,.17);border:1px solid rgba(253,250,247,.34)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#F3D08D"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:#E3B65C;border:1px solid #E3B65C"><span style="width:.62rem;height:.62rem;border-radius:50%;background:#43171F"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;background:rgba(253,250,247,.055);border:1px solid rgba(253,250,247,.10)"></div></td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(253,250,247,.72);text-align:left;padding:0 .5rem 0 0;width:4.4rem">Ed.D.</th>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;display:grid;place-items:center;background:#E3B65C;border:1px solid #E3B65C"><span style="width:.62rem;height:.62rem;border-radius:50%;background:#43171F"></span></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;background:rgba(253,250,247,.055);border:1px solid rgba(253,250,247,.10)"></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;background:rgba(253,250,247,.055);border:1px solid rgba(253,250,247,.10)"></div></td>
+              <td style="padding:0"><div style="height:2.7rem;border-radius:.35rem;background:rgba(253,250,247,.055);border:1px solid rgba(253,250,247,.10)"></div></td>
+            </tr>
+          </tbody>
+        </table></div>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem 1.15rem;margin-top:1.15rem;font-size:.72rem;color:rgba(253,250,247,.68);line-height:1.45">
+          <span style="display:flex;align-items:center;gap:.45rem"><i style="width:.72rem;height:.72rem;border-radius:.18rem;flex:none;background:rgba(253,250,247,.20);border:1px solid rgba(253,250,247,.38)"></i> Served by EGA</span>
+          <span style="display:flex;align-items:center;gap:.45rem"><i style="width:.72rem;height:.72rem;border-radius:.18rem;flex:none;background:#E3B65C"></i> Also seated on the leadership board</span>
+          <span style="display:flex;align-items:center;gap:.45rem"><i style="width:.72rem;height:.72rem;border-radius:1rem;flex:none;border:1px solid rgba(227,182,92,.55)"></i> Represented jointly with another GSO</span>
+        </div>
+        <p style="font-size:.7rem;color:rgba(253,250,247,.5);margin:.9rem 0 0;padding-top:.9rem;border-top:1px solid rgba(253,250,247,.22);line-height:1.5">HDFS students are represented by EGA <b style="color: rgba(253, 250, 247, 0.8);">together with HDFS‑GA</b>, the Human Development and Family Sciences Graduate Association.</p>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding:clamp(3.75rem,8vw,6.5rem) 0">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem)">
+      <div style="max-width:60ch;margin-bottom:clamp(2.25rem,4vw,3.25rem)">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#B8842A;margin:0 0 1.15rem">Start here</p>
+        <h2 style="font-size:clamp(1.9rem,1.3rem + 2.1vw,3rem);font-weight:500;letter-spacing:-.028em">Check out more information</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem">
+        <a href="#about" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;padding:1.6rem 1.5rem" style-hover="border-color:#763241;box-shadow:0 14px 30px -20px rgba(36,18,26,.55)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#763241;color:#F2E6D4;margin-bottom:.9rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 11v6"></path><path d="M12 7.6h.01"></path></svg>
+          </span>
+          <h3 style="font-size:1.22rem;font-weight:600;letter-spacing:-.015em;margin-bottom:.45rem">About EGA</h3>
+          <p style="margin:0;font-size:.89rem;color:rgba(36,18,26,.66);line-height:1.58">What we run each semester, how the organization is structured, and who sits on the board.</p>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-size:.83rem;font-weight:700;color:#763241">Read about EGA →</span>
+        </a>
+        <a href="#resources" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;padding:1.6rem 1.5rem" style-hover="border-color:#763241;box-shadow:0 14px 30px -20px rgba(36,18,26,.55)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#763241;color:#F2E6D4;margin-bottom:.9rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M9.2 14.8l2-4.2 4.2-2-2 4.2z"></path></svg>
+          </span>
+          <h3 style="font-size:1.22rem;font-weight:600;letter-spacing:-.015em;margin-bottom:.45rem">Student resources</h3>
+          <p style="margin:0;font-size:.89rem;color:rgba(36,18,26,.66);line-height:1.58">Housing, commuting and parking, library services, and a running compilation of everything else.</p>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-size:.83rem;font-weight:700;color:#763241">Browse resources →</span>
+        </a>
+        <a href="#join" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;padding:1.6rem 1.5rem" style-hover="border-color:#763241;box-shadow:0 14px 30px -20px rgba(36,18,26,.55)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#763241;color:#F2E6D4;margin-bottom:.9rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="8" r="3.2"></circle><path d="M4.5 20c0-3.3 2.5-5.6 5.5-5.6h1"></path><path d="M17 13.5v6M14 16.5h6"></path></svg>
+          </span>
+          <h3 style="font-size:1.22rem;font-weight:600;letter-spacing:-.015em;margin-bottom:.45rem">Join EGA</h3>
+          <p style="margin:0;font-size:.89rem;color:rgba(36,18,26,.66);line-height:1.58">We are looking for a <b>first-year representative</b>. No prior experience with the organization is expected.</p>
+          <span style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-size:.83rem;font-weight:700;color:#763241">See the open seat →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#24121A;color:rgba(253,250,247,.6);padding:2rem 0;font-size:.83rem">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.85rem 1.75rem">
+      <img src="assets/ega-mark.png" alt="" style="width:1.6rem;height:1.6rem;border-radius:.22rem;display:block;flex:none">
+      <span>Education Graduate Association · UD College of Education and Human Development</span>
+      <span style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .85rem">
+        <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:700;font-size:.8rem;padding:.5rem .95rem;border-radius:.4rem;border:1px solid rgba(253,250,247,.32);color:#fff" style-hover="background:rgba(253,250,247,.14);border-color:rgba(253,250,247,.6)">Contact</a>
+        <span>Or email <a href="{{ mailto }}" style="color:rgba(253,250,247,.82);text-decoration:underline;text-underline-offset:3px" style-hover="color:#E3B65C">{{ email }}</a> directly.</span>
+      </span>
+    </div>
+  </footer>
+</div>
+
+<div id="about" data-document-role="page" data-label="About EGA" data-screen-label="About EGA" style="display:{{ aboutDisplay }};background:#FDFAF7">
+  <nav style="background:#FDFAF7;border-bottom:1px solid rgba(36,18,26,.13)">
+    <div style="max-width:1180px;margin:0 auto;padding:.85rem clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem">
+      <a href="#home" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;margin-right:auto;color:#24121A">
+        <img src="assets/ega-mark.png" alt="" style="width:2.4rem;height:2.4rem;flex:none;border-radius:.45rem;display:block">
+        <span style="display:flex;flex-direction:column;line-height:1.15">
+          <b style="font-family:'Fraunces',Georgia,serif;font-size:1.02rem;font-weight:600;letter-spacing:-.01em">Education Graduate Association</b>
+          <span style="font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(36,18,26,.44);font-weight:600">University of Delaware · CEHD</span>
+        </span>
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-left:auto">
+        <a href="#home" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Home</a>
+        <a href="#about" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:#763241;background:#F2E6D4">About EGA</a>
+        <a href="#resources" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Resources</a>
+        <span style="position:relative;display:inline-flex"><a href="{{ mailto }}" onMouseEnter="{{ contactEnter }}" onMouseLeave="{{ contactLeave }}" onFocus="{{ contactEnter }}" onBlur="{{ contactLeave }}" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66);transition:color .18s,background .18s" style-hover="color:#763241;background:#F2E6D4">Contact</a><span style="display:{{ contactTipDisplay }};position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:.3rem;background:#24121A;color:#FDFAF7;font-size:.74rem;font-weight:600;padding:.35rem .6rem;border-radius:.3rem;white-space:nowrap;z-index:40;box-shadow:0 6px 18px -8px rgba(36,18,26,.6)">{{ email }}</span></span>
+        <a href="#join" style="text-decoration:none;font-size:.86rem;font-weight:700;padding:.5rem .78rem;border-radius:.4rem;background:#763241;color:#fff;box-shadow:0 2px 0 0 #43171F;white-space:nowrap" style-hover="background:#43171F">Join EGA</a>
+      </div>
+    </div>
+  </nav>
+
+  <header style="color:#F2E6D4;background:radial-gradient(70% 90% at 94% 0%,rgba(227,182,92,.15) 0%,rgba(227,182,92,0) 62%),linear-gradient(152deg,#763241 0%,#5C2433 60%,#43171F 100%)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(2.75rem,6vw,4.5rem) clamp(1.25rem,5vw,4.5rem)">
+      <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#E3B65C;margin:0 0 1.15rem">About EGA</p>
+      <h1 style="font-size: clamp(2rem,1.4rem + 2.4vw,3.25rem); color: #fff; font-weight: 500; letter-spacing: -.03em; max-width: 18ch; width: 672px; height: 102px">What we do, every semester.</h1>
+      <p style="color:rgba(253,250,247,.84);max-width:56ch;margin:1.15rem 0 0;font-size:clamp(1rem,.96rem + .22vw,1.1rem);line-height:1.65">EGA is one of the University of Delaware's registered Graduate Student Organizations. Our job is to make graduate school in CEHD less isolating and more navigable, and to make sure the college hears from students before decisions get made.</p>
+    </div>
+  </header>
+
+  <section style="padding:clamp(3.75rem,8vw,6.5rem) 0">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem)">
+      <div style="display:grid;gap:1px;background:#FDFAF7;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;overflow:hidden;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+        <div style="background:#FDFAF7;padding:1.85rem 1.5rem;box-shadow:0 0 0 1px rgba(36,18,26,.13)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#F2E6D4;color:#763241;margin-bottom:1rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h11l3 3v11H5z"></path><path d="M8 10h8M8 14h5"></path></svg>
+          </span>
+          <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 .4rem;letter-spacing:-.008em">Newsletter</h3>
+          <p style="margin:0;font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58">Published across the fall and spring, covering events, announcements, and other important information for CEHD graduate students.</p>
+        </div>
+        <div style="background:#FDFAF7;padding:1.85rem 1.5rem;box-shadow:0 0 0 1px rgba(36,18,26,.13)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#F2E6D4;color:#763241;margin-bottom:1rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3"></circle><circle cx="16.5" cy="9.5" r="2.3"></circle><path d="M3.5 19.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5"></path><path d="M16 14.6c2.3.2 4 2 4 4.4"></path></svg>
+          </span>
+          <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 .4rem;letter-spacing:-.008em">Social events</h3>
+          <p style="margin:0;font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58">Low-pressure ways to meet people outside your cohort, from coffee-and-donut mornings to grad student socials with visiting speakers.</p>
+        </div>
+        <div style="background:#FDFAF7;padding:1.85rem 1.5rem;box-shadow:0 0 0 1px rgba(36,18,26,.13)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#F2E6D4;color:#763241;margin-bottom:1rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h7v13H4z"></path><path d="M13 6h7v13h-7z"></path></svg>
+          </span>
+          <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 .4rem;letter-spacing:-.008em">Education workshops</h3>
+          <p style="margin:0;font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58">Sessions chosen from what students actually ask for, on job markets, methods, and life after the degree.</p>
+        </div>
+        <div style="background:#FDFAF7;padding:1.85rem 1.5rem;box-shadow:0 0 0 1px rgba(36,18,26,.13)">
+          <span style="display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:.5rem;background:#763241;color:#F2E6D4;margin-bottom:1rem">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"></path></svg>
+          </span>
+          <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 .4rem;letter-spacing:-.008em">Student voice</h3>
+          <p style="margin:0;font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58">We collect feedback through needs assessments and priorities surveys, then advocate for it with college leadership.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(2.5rem,5vw,3.5rem)">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#B8842A;margin:0 0 1.15rem">Recent events</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 0">
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Navigating the Non-Academic Job Market</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Navigating the Academic Job Market: UD Alum</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Accessing and Analyzing Public Quantitative Data</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Accessing and Analyzing Secondary Qualitative Data</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Advanced Ph.D. Students Panel</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Donuts and Coffee Social</span>
+          <span style="font-size:.85rem;padding:.5rem .9rem;border-radius:2rem;background:#F2E6D4;color:#43171F;font-weight:500">Colloquium and Community Grad Student Social</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(3.75rem,8vw,6.5rem) 0;background:#F2E6D4">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem)">
+      <div style="max-width:60ch;margin-bottom:clamp(2.25rem,4vw,3.25rem)">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#B8842A;margin:0 0 1.15rem">How we are organized</p>
+        <h2 style="font-size:clamp(1.9rem,1.3rem + 2.1vw,3rem);font-weight:500;letter-spacing:-.028em">Our committees and positions</h2><p style="font-size:clamp(1rem,.96rem + .22vw,1.11rem);color:rgba(36,18,26,.66);margin:1.05rem 0 0;line-height:1.66">Three standing committees do the work, a small executive team keeps the organization running, and a handful of special positions make sure specific groups are heard.</p>
+        
+      </div>
+      <div style="display:grid;gap:1.75rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+        <div style="border-top:2px solid #763241;padding-top:1.15rem">
+          <h3 style="font-size:1.06rem;font-weight:600;margin-bottom:.3rem">Three committees</h3>
+          <p style="font-size:.83rem;color:rgba(36,18,26,.66);margin:0 0 1.05rem;line-height:1.55">Every member joins one. Committee heads coordinate the work.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.42rem">
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#763241;color:#fff">Social Events</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#763241;color:#fff">Education Workshops</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#763241;color:#fff">Communications</span>
+          </div>
+        </div>
+        <div style="border-top:2px solid #763241;padding-top:1.15rem">
+          <h3 style="font-size:1.06rem;font-weight:600;margin-bottom:.3rem">Executive positions</h3>
+          <p style="font-size:.83rem;color:rgba(36,18,26,.66);margin:0 0 1.05rem;line-height:1.55">The required GSO roles, covering administration and university networks.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.42rem">
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">President</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Vice President</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Treasurer</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Secretary</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Committee Heads</span>
+          </div>
+        </div>
+        <div style="border-top:2px solid #763241;padding-top:1.15rem">
+          <h3 style="font-size:1.06rem;font-weight:600;margin-bottom:.3rem">Special positions</h3>
+          <p style="font-size:.83rem;color:rgba(36,18,26,.66);margin:0 0 1.05rem;line-height:1.55">Roles that connect EGA to specific student groups and to the college.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.42rem">
+            <span style="font-size:.81rem;font-weight:700;padding:.42rem .78rem;border-radius:.35rem;background:#E3B65C;color:#43171F">First-year Representative</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Second-year Representative</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">Data Analyst</span>
+            <span style="font-size:.81rem;font-weight:600;padding:.42rem .78rem;border-radius:.35rem;background:#FBF4E9;border:1px solid rgba(36,18,26,.13)">CGSE Student Representative</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.78rem;color:rgba(36,18,26,.44);margin-top:1.9rem;line-height:1.55">Want to know who currently holds these roles? <a href="https://www.education.udel.edu/education-graduate-association/" target="_blank" rel="noopener" style="color:#763241;font-weight:700;text-underline-offset:3px">Meet the EGA board and members on the CEHD site →</a></p>
+    </div>
+  </section>
+
+  <footer style="background:#24121A;color:rgba(253,250,247,.6);padding:2rem 0;font-size:.83rem">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.85rem 1.75rem">
+      <img src="assets/ega-mark.png" alt="" style="width:1.6rem;height:1.6rem;border-radius:.22rem;display:block;flex:none">
+      <span>Education Graduate Association · UD College of Education and Human Development</span>
+      <span style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .85rem">
+        <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:700;font-size:.8rem;padding:.5rem .95rem;border-radius:.4rem;border:1px solid rgba(253,250,247,.32);color:#fff" style-hover="background:rgba(253,250,247,.14);border-color:rgba(253,250,247,.6)">Contact</a>
+        <span>Or email <a href="{{ mailto }}" style="color:rgba(253,250,247,.82);text-decoration:underline;text-underline-offset:3px" style-hover="color:#E3B65C">{{ email }}</a> directly.</span>
+      </span>
+    </div>
+  </footer>
+</div>
+
+<div id="resources" data-document-role="page" data-label="Resources" data-screen-label="Resources" style="display:{{ resourcesDisplay }};background:#FDFAF7">
+  <nav style="background:#FDFAF7;border-bottom:1px solid rgba(36,18,26,.13)">
+    <div style="max-width:1180px;margin:0 auto;padding:.85rem clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem">
+      <a href="#home" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;margin-right:auto;color:#24121A">
+        <img src="assets/ega-mark.png" alt="" style="width:2.4rem;height:2.4rem;flex:none;border-radius:.45rem;display:block">
+        <span style="display:flex;flex-direction:column;line-height:1.15">
+          <b style="font-family:'Fraunces',Georgia,serif;font-size:1.02rem;font-weight:600;letter-spacing:-.01em">Education Graduate Association</b>
+          <span style="font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(36,18,26,.44);font-weight:600">University of Delaware · CEHD</span>
+        </span>
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-left:auto">
+        <a href="#home" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Home</a>
+        <a href="#about" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">About EGA</a>
+        <a href="#resources" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:#763241;background:#F2E6D4">Resources</a>
+        <span style="position:relative;display:inline-flex"><a href="{{ mailto }}" onMouseEnter="{{ contactEnter }}" onMouseLeave="{{ contactLeave }}" onFocus="{{ contactEnter }}" onBlur="{{ contactLeave }}" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66);transition:color .18s,background .18s" style-hover="color:#763241;background:#F2E6D4">Contact</a><span style="display:{{ contactTipDisplay }};position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:.3rem;background:#24121A;color:#FDFAF7;font-size:.74rem;font-weight:600;padding:.35rem .6rem;border-radius:.3rem;white-space:nowrap;z-index:40;box-shadow:0 6px 18px -8px rgba(36,18,26,.6)">{{ email }}</span></span>
+        <a href="#join" style="text-decoration:none;font-size:.86rem;font-weight:700;padding:.5rem .78rem;border-radius:.4rem;background:#763241;color:#fff;box-shadow:0 2px 0 0 #43171F;white-space:nowrap" style-hover="background:#43171F">Join EGA</a>
+      </div>
+    </div>
+  </nav>
+
+  <header style="color:#F2E6D4;background:radial-gradient(70% 90% at 94% 0%,rgba(227,182,92,.15) 0%,rgba(227,182,92,0) 62%),linear-gradient(152deg,#763241 0%,#5C2433 60%,#43171F 100%)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(2.75rem,6vw,4.5rem) clamp(1.25rem,5vw,4.5rem)">
+      <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#E3B65C;margin:0 0 1.15rem">Resources</p>
+      <h1 style="font-size:clamp(2rem,1.4rem + 2.4vw,3.25rem);color:#fff;font-weight:500;letter-spacing:-.03em;max-width:18ch">Housing, Library, <br>&amp; Many More</h1>
+      <p style="color:rgba(253,250,247,.84);max-width:56ch;margin:1.15rem 0 0;font-size:clamp(1rem,.96rem + .22vw,1.1rem);line-height:1.65">Where to live, how to get to campus, how to get the article you need, and who to email when you are stuck. Everything below links straight to the source.</p>
+    </div>
+  </header>
+
+  
+
+  <section style="padding:clamp(3.75rem,8vw,6.5rem) 0">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem);display:grid;gap:1.5rem">
+
+      <article style="background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;overflow:hidden;box-shadow:0 1px 2px rgba(36,18,26,.04),0 12px 28px -22px rgba(36,18,26,.5)">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;padding:1.4rem clamp(1.25rem,3vw,2.1rem);border-bottom:1px solid rgba(36,18,26,.13);background:linear-gradient(180deg,#FFFDFB,#FBF6EF)">
+          <span style="flex:none;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.5rem;background:#763241;color:#F2E6D4">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.8L12 4l9 6.8"></path><path d="M5.6 9.6V20h12.8V9.6"></path></svg>
+          </span>
+          <h3 style="font-size:clamp(1.3rem,1.1rem + .7vw,1.7rem);font-weight:600;letter-spacing:-.02em;margin-top:.15rem">Finding somewhere to live</h3>
+          <p style="margin:.55rem 0 0;font-size:.88rem;color:rgba(36,18,26,.66);flex:0 0 100%;max-width:64ch">Newark has on-campus graduate options, a UD-only roommate group, and a wide off-campus market. Each one has its own catch, so read all three before you sign anything.</p>
+        </div>
+        <div style="padding:clamp(1.25rem,3vw,2.1rem);display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">On campus</h4>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">There are more on-campus housing options for graduate students this year. Before you commit, read through the <a href="https://www.udel.edu/students/reslife/apply-for-housing/graduate-student-housing-application/graduate-student-housing-contract/" target="_blank" rel="noopener" style="color:#763241;font-weight:600;text-underline-offset:3px">new graduate housing contract</a>.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://www.udel.edu/students/reslife/apply-for-housing/graduate-student-housing-application/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Graduate housing overview</a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://udel.starrezhousing.com/StarRezPortalX/C367155A/1/1/Home-Residence_Life___Hou?UrlToken=65E382B1" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Apply in the Housing Portal</a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="mailto:reslife-housing@udel.edu" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Email Residence Life</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Roommates and groups</h4>
+            
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">The Graduate College runs a Google Group for roommates and housing. You need a UD email address to be added, so if you are not in yet, we can get you added.</p>
+            <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;font-size:.83rem;padding:.55rem 1rem;border-radius:.4rem;border:1px solid rgba(36,18,26,.13);background:#fff;color:#763241" style-hover="border-color:#763241;background:#F2E6D4">Contact</a>
+            <p style="margin:.6rem 0 .9rem;font-size:.83rem;color:rgba(36,18,26,.5)">Or email <a href="{{ mailto }}" style="color:#763241;font-weight:600;text-underline-offset:3px">{{ email }}</a> directly.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://groups.google.com/a/udel.edu/g/graduatecollegestudentlife" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">UD roommates and housing group<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">UD email required</span></a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://www.places4students.com/schools/1255-university-of-delaware-newark-de" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Places4Students<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">third party</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Off campus</h4>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">Plenty of our graduate students rent nearby, and you can scout most of those buildings on Google Maps. Some people live in Elkton, MD, which is a short drive to Willard Hall and often cheaper.</p>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">Many students and professors also commute in from other parts of Delaware, and even from Philadelphia, since the Newark train station makes the trip workable without living in Newark.</p>
+            <p style="margin:0 0 .3rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">Before you sign, ask:</p>
+            <ul style="list-style:square;padding:0 0 0 1.15rem;margin:.5rem 0 0">
+              <li style="font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58;margin-bottom:.6rem"><b style="color:#24121A">Utilities.</b> What is included, and what lands on you?</li>
+              <li style="font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58;margin-bottom:.6rem"><b style="color:#24121A">Deposit.</b> How much, and when is it due?</li>
+              <li style="font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58;margin-bottom:.6rem"><b style="color:#24121A">Guarantor.</b> Do they require one, and will they accept an assistantship letter instead?</li>
+              <li style="font-size:.88rem;color:rgba(36,18,26,.66);line-height:1.58"><b style="color:#24121A">The lease itself.</b> Read the whole rental agreement, including the renewal and early-termination clauses.</li>
+            </ul>
+          </div>
+          <div style="grid-column:1/-1;display:flex;gap:1rem;align-items:flex-start;background:#FDF3E2;border:1px solid rgba(184,132,42,.4);border-left:4px solid #B8842A;border-radius:.5rem;padding:1.1rem 1.25rem">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:.12rem;color:#B8842A"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <p style="margin:0;font-size:.87rem;line-height:1.6;color:#24121A"><strong style="font-weight:700">Watch out for rental scams.</strong> Third-party groups are not screened by the university. When you are looking for a roommate or a sublet, deal only with people who have a <b>@udel.edu</b> address, and never send a deposit before you have seen the unit and read the lease.</p>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;overflow:hidden;box-shadow:0 1px 2px rgba(36,18,26,.04),0 12px 28px -22px rgba(36,18,26,.5)">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;padding:1.4rem clamp(1.25rem,3vw,2.1rem);border-bottom:1px solid rgba(36,18,26,.13);background:linear-gradient(180deg,#FFFDFB,#FBF6EF)">
+          <span style="flex:none;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.5rem;background:#763241;color:#F2E6D4">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"></rect><path d="M4 10h16"></path><circle cx="8" cy="19.2" r="1.4"></circle><circle cx="16" cy="19.2" r="1.4"></circle></svg>
+          </span>
+          <h3 style="font-size:clamp(1.3rem,1.1rem + .7vw,1.7rem);font-weight:600;letter-spacing:-.02em;margin-top:.15rem">Getting to campus and parking</h3>
+          <p style="margin:.55rem 0 0;font-size:.88rem;color:rgba(36,18,26,.66);flex:0 0 100%;max-width:64ch">Whether you walk from a Newark apartment, ride the UD bus, take the train in, or drive and park, the university keeps the details in two places.</p>
+        </div>
+        <div style="padding:clamp(1.25rem,3vw,2.1rem);display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Transportation</h4>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">UD's transportation site has the UD bus system schedules and routes, plus local and regional transit connections, which is what most commuting students need.</p>
+            <a href="http://sites.udel.edu/transportation/" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#F2E6D4;border-radius:.5rem;padding:.9rem 1rem;margin-bottom:1rem" style-hover="background:#EADCC4">
+              <span style="display:block;font-weight:700;font-size:.94rem;color:#43171F">UD Transportation Information</span>
+              <span style="display:block;font-size:.78rem;font-weight:400;color:rgba(36,18,26,.6);margin-top:.15rem">UD bus system, local and regional transit</span>
+            </a>
+            <p style="margin:0 0 .5rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(36,18,26,.44)">Also useful</p>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem;display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;flex-wrap:wrap">
+                <span style="font-weight:600;font-size:.9rem;color:#24121A">UD Shuttle Bus Tracking App</span>
+                <span style="font-size:.85rem;font-weight:600;display:flex;gap:.9rem">
+                  <a href="https://apps.apple.com/us/app/eta-transit/id6758356982" target="_blank" rel="noopener" style="color:#763241;text-decoration:underline;text-underline-offset:3px">iOS</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.etatransit.spot&amp;pcampaignid=web_share" target="_blank" rel="noopener" style="color:#763241;text-decoration:underline;text-underline-offset:3px">Android</a>
+                </span>
+              </li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://schedules.septa.org/current/WIL.pdf" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">SEPTA Regional Rail schedule<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">Philadelphia ↔ Newark, DE</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Parking</h4>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">If you plan to drive in and park on campus, check the permit types and current prices before the semester starts.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://sites.udel.edu/parking/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">UD Parking Services</a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://sites.udel.edu/parking/permit-pricing-2026-2027/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Permit pricing, 2026–2027<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">rates by permit type</span></a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://sites.udel.edu/parking/bicycle-info/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Biking information</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;overflow:hidden;box-shadow:0 1px 2px rgba(36,18,26,.04),0 12px 28px -22px rgba(36,18,26,.5)">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;padding:1.4rem clamp(1.25rem,3vw,2.1rem);border-bottom:1px solid rgba(36,18,26,.13);background:linear-gradient(180deg,#FFFDFB,#FBF6EF)">
+          <span style="flex:none;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.5rem;background:#763241;color:#F2E6D4">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h7v14H4z"></path><path d="M13 5.5h7v14h-7z"></path></svg>
+          </span>
+          <h3 style="font-size:clamp(1.3rem,1.1rem + .7vw,1.7rem);font-weight:600;letter-spacing:-.02em;margin-top:.15rem">Getting what you need from the library</h3>
+          <p style="margin:.55rem 0 0;font-size:.88rem;color:rgba(36,18,26,.66);flex:0 0 100%;max-width:64ch">Morris Library does more than lend books. These services save the most time in a typical semester.</p>
+        </div>
+        <div style="padding:clamp(1.25rem,3vw,2.1rem);display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Space and time</h4>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://udel.libcal.com/r/new" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Reserve a study room</a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://udel.libcal.com/calendar" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Library events and workshops</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Getting the full text</h4>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://guides.lib.udel.edu/FTtools" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Full-text access tools</a></li>
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://library.udel.edu/interlibraryloan/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Interlibrary loan<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">PDFs often arrive same day</span></a></li>
+            </ul>
+            <p style="margin:.9rem 0 0;font-size:.85rem;color:rgba(36,18,26,.66);line-height:1.62">If an article is paywalled, request a PDF copy through interlibrary loan. During working hours it usually comes back quickly.</p>
+          </div>
+          <div>
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:.85rem">Printing and scanning</h4>
+            <p style="margin:0 0 .8rem;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">The library's printing and scanning service is particularly useful when you need to print a conference poster. Students also receive a <b style="color:#24121A">$5.00 free printing allocation each fall and spring semester</b>.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1px;background:rgba(36,18,26,.13)">
+              <li style="background:#fff;padding:.78rem .2rem"><a href="https://library.udel.edu/circulation/print-scan/" target="_blank" rel="noopener" style="display:block;text-decoration:none;font-weight:600;font-size:.9rem;color:#24121A" style-hover="color:#763241">Printing and scanning at the library<span style="display:block;font-size:.76rem;font-weight:400;color:rgba(36,18,26,.44);margin-top:.15rem">poster printing, rates, allocation</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:#fff;border:1px solid rgba(36,18,26,.13);border-radius:.75rem;overflow:hidden;box-shadow:0 1px 2px rgba(36,18,26,.04),0 12px 28px -22px rgba(36,18,26,.5)">
+        <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;padding:1.4rem clamp(1.25rem,3vw,2.1rem);border-bottom:1px solid rgba(36,18,26,.13);background:linear-gradient(180deg,#FFFDFB,#FBF6EF)">
+          <span style="flex:none;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.5rem;background:#763241;color:#F2E6D4">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h9l4 4v13H6z"></path><path d="M9 11.5h8M9 15.5h5"></path></svg>
+          </span>
+          <h3 style="font-size:clamp(1.3rem,1.1rem + .7vw,1.7rem);font-weight:600;letter-spacing:-.02em;margin-top:.15rem">Everything else, in one document</h3>
+          <p style="margin:.55rem 0 0;font-size:.88rem;color:rgba(36,18,26,.66);flex:0 0 100%;max-width:64ch">Funding, health, childcare, campus offices, and the small logistics of graduate life. EGA keeps a running compilation and adds to it as students flag gaps.</p>
+        </div>
+        <div style="padding:clamp(1.25rem,3vw,2.1rem);display:grid;gap:2rem">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));align-items:center;gap:1.25rem 2rem">
+            <p style="margin:0;font-size:.9rem;color:rgba(36,18,26,.66);line-height:1.62">The document is maintained by EGA and open to every CEHD graduate student. Something missing or out of date? <a href="{{ mailto }}" style="color:#763241;font-weight:600;text-underline-offset:3px">Tell us and we will add it</a>. Or email <a href="{{ mailto }}" style="color:#763241;font-weight:600;text-underline-offset:3px">{{ email }}</a> directly.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.7rem">
+              <a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;background:#763241;color:#fff;box-shadow:0 3px 0 0 #43171F;white-space:nowrap" style-hover="background:#43171F">Open the compilation →</a>
+              <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;border:1px solid rgba(36,18,26,.13);background:#fff;color:#763241;white-space:nowrap" style-hover="border-color:#763241;background:#F2E6D4">Contact</a>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(36,18,26,.13);padding-top:1.6rem">
+            <h4 style="font-family:'Karla',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#B8842A;margin-bottom:1rem">Table of contents</h4>
+            <div style="display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+              <div>
+                <h5 style="font-size:.92rem;font-weight:700;color:#24121A;margin:0 0 .6rem">General Resources</h5>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem">
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.ixm6k6qknmaa" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">General UD Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.35mdg8z02ghq" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">COVID Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.mnvbcy106sjn" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">SOE and HDFS Resources</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="font-size:.92rem;font-weight:700;color:#24121A;margin:0 0 .6rem">Research</h5>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem">
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.i5xxqv85c6sr" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Statistics Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.gvdql94ux2tg" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">General Research Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.288nu2yuywqn" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Conference Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit?tab=t.0#bookmark=id.5mdyhzgzwm5d" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Publication Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.198nkbppin7b" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Design Resources</a></li>
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.yx20t93tm18u" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Graduate Student Finances</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="font-size:.92rem;font-weight:700;color:#24121A;margin:0 0 .6rem">Dissertation / Final Papers</h5>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem">
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.7kt33zept86l" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Preparing Your Dissertation Resources</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="font-size:.92rem;font-weight:700;color:#24121A;margin:0 0 .6rem">EGA</h5>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem">
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.xfwq0284iq50" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">EGA Workshop Recordings and Resources</a></li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="font-size:.92rem;font-weight:700;color:#24121A;margin:0 0 .6rem">Additional Information</h5>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem">
+                  <li><a href="https://docs.google.com/document/d/1EO74lMqxE38zgjiM1akFcRUz9VVh70ZcNnw07wGZ70E/edit#bookmark=id.49poifwksusp" target="_blank" rel="noopener" style="font-size:.86rem;color:#763241;text-decoration:underline;text-underline-offset:3px">Helpful Podcasts and Websites</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section><footer style="background:#24121A;color:rgba(253,250,247,.6);padding:2rem 0;font-size:.83rem">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.85rem 1.75rem">
+      <img src="assets/ega-mark.png" alt="" style="width:1.6rem;height:1.6rem;border-radius:.22rem;display:block;flex:none">
+      <span>Education Graduate Association · UD College of Education and Human Development</span>
+      <span style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .85rem">
+        <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:700;font-size:.8rem;padding:.5rem .95rem;border-radius:.4rem;border:1px solid rgba(253,250,247,.32);color:#fff" style-hover="background:rgba(253,250,247,.14);border-color:rgba(253,250,247,.6)">Contact</a>
+        <span>Or email <a href="{{ mailto }}" style="color:rgba(253,250,247,.82);text-decoration:underline;text-underline-offset:3px" style-hover="color:#E3B65C">{{ email }}</a> directly.</span>
+      </span>
+    </div>
+  </footer>
+</div>
+
+<div id="join" data-document-role="page" data-label="Join EGA" data-screen-label="Join EGA" style="display:{{ joinDisplay }};background:#FDFAF7">
+  <nav style="background:#FDFAF7;border-bottom:1px solid rgba(36,18,26,.13)">
+    <div style="max-width:1180px;margin:0 auto;padding:.85rem clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem">
+      <a href="#home" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;margin-right:auto;color:#24121A">
+        <img src="assets/ega-mark.png" alt="" style="width:2.4rem;height:2.4rem;flex:none;border-radius:.45rem;display:block">
+        <span style="display:flex;flex-direction:column;line-height:1.15">
+          <b style="font-family:'Fraunces',Georgia,serif;font-size:1.02rem;font-weight:600;letter-spacing:-.01em">Education Graduate Association</b>
+          <span style="font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(36,18,26,.44);font-weight:600">University of Delaware · CEHD</span>
+        </span>
+      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-left:auto">
+        <a href="#home" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Home</a>
+        <a href="#about" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">About EGA</a>
+        <a href="#resources" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66)" style-hover="color:#763241;background:#F2E6D4">Resources</a>
+        <span style="position:relative;display:inline-flex"><a href="{{ mailto }}" onMouseEnter="{{ contactEnter }}" onMouseLeave="{{ contactLeave }}" onFocus="{{ contactEnter }}" onBlur="{{ contactLeave }}" style="text-decoration:none;font-size:.86rem;font-weight:600;padding:.5rem .78rem;border-radius:.4rem;color:rgba(36,18,26,.66);transition:color .18s,background .18s" style-hover="color:#763241;background:#F2E6D4">Contact</a><span style="display:{{ contactTipDisplay }};position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:.3rem;background:#24121A;color:#FDFAF7;font-size:.74rem;font-weight:600;padding:.35rem .6rem;border-radius:.3rem;white-space:nowrap;z-index:40;box-shadow:0 6px 18px -8px rgba(36,18,26,.6)">{{ email }}</span></span>
+        <a href="#join" style="text-decoration:none;font-size:.86rem;font-weight:700;padding:.5rem .78rem;border-radius:.4rem;background:#763241;color:#fff;box-shadow:0 2px 0 0 #43171F;white-space:nowrap" style-hover="background:#43171F">Join EGA</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="background:radial-gradient(70% 95% at 6% 100%,rgba(227,182,92,.15) 0%,rgba(227,182,92,0) 62%),linear-gradient(140deg,#43171F,#763241);color:#F2E6D4">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(3.5rem,7vw,5.5rem) clamp(1.25rem,5vw,4.5rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(2rem,5vw,4rem);align-items:center">
+      <div>
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#E3B65C;margin:0 0 1.15rem">Open position</p>
+        <h2 style="font-size:clamp(1.9rem,1.3rem + 2.2vw,3rem);color:#fff;font-weight:500;letter-spacing:-.028em;max-width:16ch">Be the first-year representative.</h2>
+        <p style="color:rgba(253,250,247,.84);margin:1.15rem 0 0;max-width:50ch;line-height:1.65">First-year students see the gaps most clearly, and the board needs someone who is living them right now. The <b style="color:#fff;font-weight:700">first-year representative</b> brings the concerns of the incoming cohort to EGA, helps shape the workshops and socials we plan, and gets a fast introduction to how CEHD actually works. No prior experience with the organization is expected.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.1rem">
+          <a href="{{ joinUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;background:#E3B65C;color:#43171F;box-shadow:0 3px 0 0 #9E7420" style-hover="background:#EFC876">Fill in the interest form →</a>
+          <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;border:1px solid rgba(253,250,247,.4);color:#fff" style-hover="background:rgba(253,250,247,.12)">Ask a question first</a>
+        </div>
+        <p style="margin:.9rem 0 0;font-size:.83rem;color:rgba(253,250,247,.62)">Or email <a href="{{ mailto }}" style="color:#E3B65C;text-decoration:underline;text-underline-offset:3px">{{ email }}</a> directly.</p>
+      </div>
+      <div style="background:rgba(253,250,247,.07);border:1px solid rgba(253,250,247,.22);border-radius:.9rem;padding:1.75rem">
+        <h3 style="font-size:1.02rem;color:#fff;font-weight:600;margin-bottom:1rem">What the role involves</h3>
+        <ul style="list-style:square;padding:0 0 0 1.15rem;margin:.9rem 0 0">
+          <li style="font-size:.88rem;color:rgba(253,250,247,.8);line-height:1.58"><b style="color:#fff">The representative serves a 1.5-year term</b>, beginning in the fall of their first year and ending the following fall. They act as a liaison for first-year students, addressing concerns, promoting events, sharing resources, planning activities, and later mentoring the incoming representative through guidance, collaboration, and support.</li>
+        </ul>
+        <h3 style="font-size:1.02rem;color:#fff;font-weight:600;margin:1.5rem 0 1rem">Eligibility</h3>
+        <ul style="list-style:square;padding:0 0 0 1.15rem;margin:.9rem 0 0">
+          <li style="font-size:.88rem;color:rgba(253,250,247,.8);line-height:1.58;margin-bottom:.6rem">A member of the first-year cohort</li>
+          <li style="font-size:.88rem;color:rgba(253,250,247,.8);line-height:1.58">A full-time doctoral student in SOE or HDFS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(3.75rem,8vw,6.5rem) 0">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem)">
+      <div style="max-width:60ch">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#B8842A;margin:0 0 1.15rem">Get in touch</p>
+        <h2 style="font-size:clamp(1.9rem,1.3rem + 2.1vw,3rem);font-weight:500;letter-spacing:-.028em">Let us know</h2>
+        <p style="font-size:clamp(1rem,.96rem + .22vw,1.11rem);color:rgba(36,18,26,.66);margin:1.05rem 0 1.6rem;line-height:1.66">Questions about the association, about anything on this site, or about something you cannot find an answer to anywhere else. You do not have to hold a position to write to us.</p>
+        <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-weight:700;font-size:.9rem;padding:.82rem 1.35rem;border-radius:.45rem;background:#763241;color:#fff;box-shadow:0 3px 0 0 #43171F" style-hover="background:#43171F">Contact EGA →</a>
+        <p style="margin:.9rem 0 0;font-size:.83rem;color:rgba(36,18,26,.5)">Or email <a href="{{ mailto }}" style="color:#763241;font-weight:600;text-underline-offset:3px">{{ email }}</a> directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#24121A;color:rgba(253,250,247,.6);padding:2rem 0;font-size:.83rem">
+    <div style="max-width:1180px;margin:0 auto;padding-inline:clamp(1.25rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;gap:.85rem 1.75rem">
+      <img src="assets/ega-mark.png" alt="" style="width:1.6rem;height:1.6rem;border-radius:.22rem;display:block;flex:none">
+      <span>Education Graduate Association · UD College of Education and Human Development</span>
+      <span style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .85rem">
+        <a href="{{ mailto }}" style="display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;font-weight:700;font-size:.8rem;padding:.5rem .95rem;border-radius:.4rem;border:1px solid rgba(253,250,247,.32);color:#fff" style-hover="background:rgba(253,250,247,.14);border-color:rgba(253,250,247,.6)">Contact</a>
+        <span>Or email <a href="{{ mailto }}" style="color:rgba(253,250,247,.82);text-decoration:underline;text-underline-offset:3px" style-hover="color:#E3B65C">{{ email }}</a> directly.</span>
+      </span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ega-info@udel.edu&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;joinFormUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://forms.gle/cjdGuvombL59zX7T8&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+const PAGES = ["home", "about", "resources", "join"];
+class Component extends DCLogic {
+  state = { page: "home", contactTip: false };
+  componentDidMount() {
+    const readHash = () => {
+      const h = (window.location.hash || "").replace("#", "");
+      this.setState({ page: PAGES.includes(h) ? h : "home" });
+    };
+    readHash();
+    this._onHash = () => { readHash(); window.scrollTo(0, 0); };
+    window.addEventListener("hashchange", this._onHash);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this._onHash);
+  }
+  renderVals() {
+    const email = this.props.contactEmail ?? "ega-info@udel.edu";
+    return {
+      mailto: "mailto:" + email,
+      email,
+      emailHint: "Or email " + email + " directly.",
+      contactEnter: () => this.setState({ contactTip: true }),
+      contactLeave: () => this.setState({ contactTip: false }),
+      contactTipDisplay: this.state.contactTip ? "block" : "none",
+      joinUrl: this.props.joinFormUrl ?? "https://forms.gle/cjdGuvombL59zX7T8",
+      homeDisplay: this.state.page === "home" ? "block" : "none",
+      aboutDisplay: this.state.page === "about" ? "block" : "none",
+      resourcesDisplay: this.state.page === "resources" ? "block" : "none",
+      joinDisplay: this.state.page === "join" ? "block" : "none"
+    };
+  }
+}
+</script>
+</body>
+</html>
